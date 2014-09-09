@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="dh89-base.xml">
+
+  <sim>
+
+    <description>De Havilland DH 89 (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>dh89-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+
+
