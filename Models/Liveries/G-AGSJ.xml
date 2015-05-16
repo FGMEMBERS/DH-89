@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!-- DH.89A Dragon Rapide G-AGSJ (c/n 6888)
+Island Air Services 1956 -->
+
+
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">G-AGSJ</name>
+        <texture>Liveries/G-AGSJ.png</texture>
+<!--
+        <diffuse>
+          <red>   0.5 </red>
+          <green> 0.5 </green>
+          <blue>  0.5 </blue>
+        </diffuse>
+
+        <ambient>
+          <red>   0.5 </red>
+          <green> 0.5 </green>
+          <blue>  0.5 </blue>
+        </ambient>
+-->
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+
+        <emission>
+          <red>   0.2 </red>
+          <green> 0.2 </green>
+          <blue>  0.2 </blue>
+        </emission>
+<!--
+        <transparency>
+          <alpha> 0.0 </alpha>
+        </transparency>
+
+        <shininess>10</shininess>
+-->
+      </livery>
+    </model>
+  </sim>
+</PropertyList>
