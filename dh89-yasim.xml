@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- D.H.89       : Updated with Melchior's script
-                    2011 Emmanuel BARANGER
+<!-- D.H.89       : Emmanuel BARANGER 2011 with Melchior's script
+          Updated : Detlef   FABER    2011
+          Updated : Emmanuel BARANGER 2015
 
      Source       : http://en.wikipedia.org/wiki/De_Havilland_Dragon_Rapide
                  
@@ -13,9 +14,9 @@
      Max speed    :  253 km/h    ( 136 ky  ) at 1000 ft ( 305 m )
 -->
 
-<airplane mass="3230">
+<airplane mass="3230" version="YASIM_VERSION_CURRENT">
 
-  <approach speed="55" aoa="12">
+  <approach speed="55" aoa="3" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.5"/>
@@ -23,7 +24,7 @@
     <control-setting axis="/controls/flight/flaps" value="1"/>
   </approach>
 
-  <cruise speed="130" alt="5000">
+  <cruise speed="130" alt="5000" fuel="0.7">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
@@ -33,20 +34,35 @@
 
   <cockpit x="4.022" y="0" z="0.468"/>
 
-  <fuselage ax="5.261" ay="0" az="-0.246" bx="-4.8" by="0" bz="0.2" width="1.2" taper="0.5" midpoint="0.1"/>
-
+  <!-- Sections basses -->
+  <fuselage ax=" 5.261" ay=" 0.000" az="-0.246" bx=" 4.639" by=" 0.000" bz="-0.171" width="0.800" taper="0.2" midpoint="1.0"/>
+  <fuselage ax=" 4.697" ay=" 0.000" az="-0.171" bx=" 3.820" by=" 0.000" bz="-0.262" width="1.150" taper="0.7" midpoint="1.0"/>
+  <fuselage ax=" 3.846" ay=" 0.000" az="-0.262" bx=" 2.566" by=" 0.000" bz="-0.262" width="1.307" taper="0.9" midpoint="1.0"/>
+  <fuselage ax=" 2.566" ay=" 0.000" az="-0.262" bx="-0.443" by=" 0.000" bz="-0.262" width="1.307" taper="0.8" midpoint="0.0"/>
+  <fuselage ax="-0.443" ay=" 0.000" az="-0.262" bx="-4.065" by=" 0.000" bz=" 0.013" width="1.030" taper="0.2" midpoint="0.0"/>
+  <fuselage ax="-4.065" ay=" 0.000" az=" 0.013" bx="-4.825" by=" 0.000" bz=" 0.125" width="0.210" taper="0.1" midpoint="0.0"/>
+  <!-- Sections hautes -->
+  <fuselage ax=" 4.414" ay=" 0.000" az="-0.050" bx=" 4.129" by=" 0.000" bz=" 0.172" width="0.988" taper="0.8" midpoint="1.0"/>
+  <fuselage ax=" 4.444" ay=" 0.000" az=" 0.109" bx=" 2.566" by=" 0.000" bz=" 0.109" width="1.307" taper="0.7" midpoint="1.0"/>
+  <fuselage ax=" 2.566" ay=" 0.000" az=" 0.119" bx="-0.443" by=" 0.000" bz=" 0.119" width="1.307" taper="0.8" midpoint="0.0"/>
+  <fuselage ax="-0.443" ay=" 0.000" az=" 0.117" bx="-4.074" by=" 0.000" bz=" 0.200" width="1.030" taper="0.2" midpoint="0.0"/>
+  <fuselage ax="-4.065" ay=" 0.000" az=" 0.192" bx="-4.825" by=" 0.000" bz=" 0.125" width="0.210" taper="0.1" midpoint="0.0"/>
+  <!-- Engine left -->  
+  <fuselage ax=" 3.825" ay=" 1.816" az="-0.737" bx=" 0.864" by=" 1.816" bz="-0.737" width="0.610" taper="0.3" midpoint="0.3"/>
+  <!-- Engine right -->  
+  <fuselage ax=" 3.825" ay="-1.816" az="-0.737" bx=" 0.864" by="-1.816" bz="-0.737" width="0.610" taper="0.3" midpoint="0.3"/>
+  
   <!-- lower wing -->
-  <wing x="1.651" y="0.67" z="-0.767" 
-        chord="1.857" 
-        length="6.577" 
-        camber="0.28"
-        taper="0.29" 
-        sweep="-3.0" 
-        dihedral="1" 
-        twist="-3">
-        <stall aoa="12" width="6" peak="1.5"/>
-        <flap0 start="0.01" end="0.36" lift="1.5" drag="1.2"/>
-        <flap1 start="0.60" end="0.97" lift="1.3" drag="1.1"/>
+  <wing x="1.651" y="0" z="-0.767" 
+        chord="1.9" 
+        length="7.26" 
+        taper="0.4" 
+        sweep="-2" 
+        dihedral="1"
+        camber="0.005">
+        <stall aoa="20" width="1" peak="1.5"/>
+        <flap0 start="0.10" end="0.42" lift="1.2" drag="1.2"/>
+        <flap1 start="0.63" end="0.97" lift="1.2" drag="1.1"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
@@ -60,16 +76,15 @@
   </wing>
 
   <!-- upper wing -->
-  <mstab x="1.834" y="0.67" z="0.694" 
-         chord="1.857" 
-         length="6.577" 
-         camber="0.1"
-         taper="0.29" 
-         sweep="-3.0" 
-         dihedral="2" 
-         twist="-3">
-         <stall aoa="12" width="6" peak="1.5"/>
-         <flap0 start="0.60" end="0.97" lift="1.3" drag="1.1"/>
+  <mstab x="1.834" y="0" z="0.694" 
+         chord="1.9" 
+         length="7.26" 
+         taper="0.4" 
+         sweep="-2" 
+         dihedral="2"
+         camber="0.005">
+         <stall aoa="20" width="1" peak="1.5"/>
+         <flap0 start="0.63" end="0.97" lift="1.2" drag="1.1"/>
 
          <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
          <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
@@ -82,11 +97,10 @@
   <hstab x="-4.108" y="0.078" z="0.357" 
          chord="1.460" 
          length="1.933"
-         taper="0.8" 
-         sweep="0" 
-         incidence="0">
-         <stall aoa="18" width="3" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.8" drag="1.7"/>
+         taper="0.4"
+         sweep="4">
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.3" drag="1.1"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0" />
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -100,8 +114,8 @@
          chord="1.877" 
          taper="0.462" 
          sweep="12">
-         <stall aoa="14" width="3" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+         <stall aoa="16" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.2" drag="1.1"/>
 
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -195,7 +209,4 @@
   <tank x="1.8" y=" 1.819" z="-0.767" capacity="305"/>
   <tank x="1.8" y="-1.819" z="-0.767" capacity="305"/>
 
-  <ballast x="-3.0" y="0.0" z="0.3" mass="-1100"/>  
-
 </airplane>
-
