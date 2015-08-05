@@ -1,16 +1,16 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 5
 OBJECT poly
 name "face"
-loc 0.001278 0 -0
+loc 0.002516 0 -0
 data 4
 face
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 17
 0.004157 -0.000171 -0.03223
 0.004157 0.01215 -0.029779
@@ -134,7 +134,7 @@ data 4
 fond
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 192
 0.007378 -0.018488 0.027879
 0.001344 -0.030976 0.000186
@@ -1452,12 +1452,12 @@ refs 4
 kids 0
 OBJECT poly
 name "needle1"
-loc 0.001278 0 -0
+loc 0.002314 0 -0
 data 7
 needle1
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 44
 0.005071 0.028987 -0.00013
 0.005071 0.026792 -0.001048
@@ -1751,7 +1751,7 @@ data 6
 visses
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 68
 0.007906 -0.02615 0.026098
 0.007761 -0.027167 0.025424
@@ -2244,7 +2244,7 @@ name "vitre"
 loc 0.000072 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 33
 0.008481 0.026148 -0.017431
 0.008481 0.029053 -0.011999

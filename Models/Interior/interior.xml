@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>interior.ac</path>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
     <object-name>cockpitwall</object-name>
     <object-name>intdoor</object-name>
-
+    <object-name>inttourvitre</object-name>
+    <object-name>planchet</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
     <object-name>intvitreporte</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Fiat-G91/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitreporte</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitreporte</object-name>
-  </animation>
-
+  </effect>
+  
+  <!-- All seats -->
+  <model> 
+    <path>Aircraft/DH-89/Models/Interior/Seats/all-seats.xml</path>
+  </model>
+  
   <!-- cockpit models -->
-    <model> 
-      <path>Aircraft/DH-89/Models/Interior/Panel/panel.xml</path>
-      <offsets> 
-        <x-m> -4.640 </x-m>
-        <y-m>  0.000 </y-m>
-        <z-m>  0.013 </z-m>
-      </offsets>
-    </model>
-
+  <model> 
+    <path>Aircraft/DH-89/Models/Interior/Panel/panel.xml</path>
+    <offsets> 
+      <x-m> -4.640 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.013 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Pilote -->
   <model>
     <name>Pilote</name>
@@ -49,17 +55,31 @@
       <z-m>  0.011 </z-m>
     </offsets>
   </model>
-
+  
   <animation>
     <name>IntPorteComplete</name>
     <object-name>intdoor</object-name>
     <object-name>intvitreporte</object-name>
   </animation>
-
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteComplete</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
   <animation>
     <type>rotate</type>
     <object-name>IntPorteComplete</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -95 </factor>
     <center>
       <x-m> -1.427 </x-m>
@@ -72,6 +92,5 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>
-

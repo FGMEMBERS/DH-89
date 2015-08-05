@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="dh89-jsbsim-cnf.xml"> -->
-<PropertyList include="dh89-yasim-cnf.xml">
-
+<PropertyList include="dh89-base.xml">
+  
   <sim>
 
-    <description>De Havilland DH 89</description>
-    <author>BARANGER Emmanuel (3D, Texture), FABER Detlef (FDM, 3D panel, Texture)</author>
-
+    <description>De Havilland DH 89 (YASim)</description>
+    <author>BARANGER Emmanuel (FDM, 3D, Texture), FABER Detlef (FDM, 3D panel, Texture)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model>yasim</flight-model>
+    <aero>dh89-yasim</aero>
+    
     <rating>
       <FDM type="int">     2 </FDM>
       <systems type="int"> 1 </systems>
@@ -18,4 +22,3 @@
   </sim>
 
 </PropertyList>
-

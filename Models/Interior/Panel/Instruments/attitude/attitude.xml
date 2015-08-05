@@ -15,18 +15,12 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/DH-89/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -34,10 +28,10 @@
     <object-name>horizon-line</object-name>
     <object-name>aircraft-line</object-name>
     <emission>
-      <red>   0.028 </red>
-      <green> 0.014 </green>
-      <blue>  0.007 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
     </emission>
   </animation>
 
@@ -47,9 +41,9 @@
     <object-name>horizon-line</object-name>
     <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
     <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -69,9 +63,9 @@
       <entry><ind>  180 </ind><dep> -0.03 </dep></entry>
     </interpolation>
       <axis> 
-       <x>0</x>
-       <y>0</y>
-       <z>1</z>
+       <x> 0 </x>
+       <y> 0 </y>
+       <z> 1 </z>
     </axis>
   </animation>
 
