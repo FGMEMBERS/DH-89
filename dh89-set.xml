@@ -19,6 +19,18 @@
       <model type="int">   3 </model>
     </rating>
 
+    <tags>
+      <tag>1930s</tag>
+      <tag>transport</tag>
+      <tag>biplane</tag>
+      <tag>fixed-gear</tag>
+      <tag>piston</tag>
+      <tag>twin-engine</tag>
+      <tag>propeller</tag>
+      <tag>tail-dragger</tag>
+      <tag>variable-pitch</tag>
+    </tags>
+
   </sim>
 
 </PropertyList>
